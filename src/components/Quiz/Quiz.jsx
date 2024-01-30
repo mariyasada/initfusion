@@ -2,8 +2,7 @@ import React from "react";
 import "./Quiz.css";
 
 const Quiz = ({ currentQuestion, onChangeHandler, shuffledData }) => {
-  const { question, difficulty, options } = currentQuestion;
-
+  const { question, options } = currentQuestion;
   return (
     <div className="quiz-container">
       <div className="title"> {question}</div>
