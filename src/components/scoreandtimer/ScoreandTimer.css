@@ -1,0 +1,14 @@
+.scorecontainer{
+    width: 67%;
+    display: flex;
+    gap:30px;
+    justify-content: flex-end;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+   
+}
+.timer{
+    color:red
+}
