@@ -15,7 +15,7 @@ function App() {
     submitScreen: false,
   });
 
-  // render a question based on number initially render first question
+  // render a question based on number ,initially render first question and the options are shuffled
   useEffect(() => {
     const currentQue = quizData[currentQuestionNumber];
     const shuffledData = currentQue.options?.sort(() => Math.random() * 2 - 1);
@@ -57,14 +57,6 @@ function App() {
       setCurrentQuestionNumber((prev) => prev + 1);
     }
   };
-
-  //shuffled all options
-  useEffect(() => {
-    if (question) {
-      const shuffled = question?.options?.sort(() => Math.random() - 0.5);
-      setOptions((prev) => ({ ...prev, shuffledOptions: shuffled }));
-    }
-  }, []);
 
   // this function runs when user select the answer of question, so in this i am adding an object with some property and if user change the answer then it updates previous added object
   const submitHandler = (e, question) => {

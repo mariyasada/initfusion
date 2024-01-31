@@ -2,10 +2,12 @@ import React from "react";
 import "./Quiz.css";
 
 const Quiz = ({ currentQuestion, onChangeHandler, shuffledData }) => {
-  const { question, options } = currentQuestion;
+  const { question, options, id } = currentQuestion;
   return (
     <div className="quiz-container">
-      <div className="title"> {question}</div>
+      <div className="title">
+        {id}. {question}
+      </div>
       {options?.map((option) => (
         <div className="options" key={option}>
           <input
